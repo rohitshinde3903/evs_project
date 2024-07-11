@@ -1,68 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electronic Voting Software</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="{% static 'dist/styles.css' %}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'main/css/custom.css' %}" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
         }
-        .content {
-            margin-top: 20px;
-        }
-        .header, .footer {
-            background-color: #343a40;
-            color: #fff;
-            padding: 10px 0;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .content h1, .content h2 {
-            color: #343a40;
-        }
-        .content p, .content ul, .content ol {
-            margin-bottom: 20px;
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
-<body>
-    <div class="header text-center">
-        <h1>Electronic Voting Software (EVS)</h1>
+<body class="bg-gray-900 text-white">
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-gray-800 p-6">
+            <h1 class="text-4xl font-bold text-center fade-in">Electronic Voting Software (EVS)</h1>
+        </header>
+        <main class="flex-grow container mx-auto p-6">
+            <section class="mb-8">
+                <h2 class="text-3xl font-bold mb-4">About EVS</h2>
+                <p class="text-lg mb-4">Welcome to the Electronic Voting Software (EVS). This software is designed to provide a secure and efficient way to conduct electronic voting, similar to an Electronic Voting Machine (EVM) but on a computer.</p>
+            </section>
+            <section class="mb-8">
+                <h2 class="text-3xl font-bold mb-4">Features</h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Secure voting process</li>
+                    <li>Real-time results</li>
+                    <li>User-friendly interface</li>
+                </ul>
+            </section>
+            <section class="mb-8">
+                <h2 class="text-3xl font-bold mb-4">How to Use EVS</h2>
+                <ol class="list-decimal list-inside space-y-2">
+                    <li>Log in to the system using your credentials.</li>
+                    <li>Select the election you want to vote in.</li>
+                    <li>Choose your preferred candidates.</li>
+                    <li>Submit your vote.</li>
+                    <li>Log out of the system.</li>
+                </ol>
+            </section>
+            <section>
+                <h2 class="text-3xl font-bold mb-4">About the Author</h2>
+                <p>This software was developed by [Your Name], a student at [Your College]. For more information, please contact [Your Email].</p>
+            </section>
+        </main>
+        <footer class="bg-gray-800 p-6 text-center">
+            <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        </footer>
     </div>
-    <div class="container">
-        <div class="content">
-            <h1>About EVS</h1>
-            <p>Welcome to the Electronic Voting Software (EVS). This software is designed to provide a secure and efficient way to conduct electronic voting, similar to an Electronic Voting Machine (EVM) but on a computer.</p>
-            <h2>Features</h2>
-            <ul class="list-group">
-                <li class="list-group-item">Secure voting process</li>
-                <li class="list-group-item">Real-time results</li>
-                <li class="list-group-item">User-friendly interface</li>
-            </ul>
-            <h2>How to Use EVS</h2>
-            <ol class="list-group">
-                <li class="list-group-item">Log in to the system using your credentials.</li>
-                <li class="list-group-item">Select the election you want to vote in.</li>
-                <li class="list-group-item">Choose your preferred candidates.</li>
-                <li class="list-group-item">Submit your vote.</li>
-                <li class="list-group-item">Log out of the system.</li>
-            </ol>
-            <h2>About the Author</h2>
-            <p>This software was developed by [Your Name], a student at [Your College]. For more information, please contact [Your Email].</p>
-        </div>
-    </div>
-    <div class="footer">
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-    </div>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{% static 'main/js/custom.js' %}"></script>
 </body>
-</html
+</html>
