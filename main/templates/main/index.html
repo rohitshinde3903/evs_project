@@ -13,48 +13,126 @@
         .fade-in {
             animation: fadeIn 2s ease-in-out;
         }
-
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-100 text-gray-900">
     <div class="min-h-screen flex flex-col">
-        <header class="bg-gray-800 p-6">
-            <h1 class="text-4xl font-bold text-center fade-in">Electronic Voting Software (EVS)</h1>
+        <!-- Navbar -->
+        <header class="bg-white shadow-md">
+            <div class="container mx-auto p-6 flex justify-between items-center">
+                <h1 class="text-3xl font-bold text-purple-700">EVS</h1>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="text-lg text-gray-700 hover:text-purple-700">Home</a></li>
+                        <li><a href="#" class="text-lg text-gray-700 hover:text-purple-700">Features</a></li>
+                        <li><a href="#" class="text-lg text-gray-700 hover:text-purple-700">How to Use</a></li>
+                        <li><a href="#" class="text-lg text-gray-700 hover:text-purple-700">About</a></li>
+                        <li><a href="#" class="text-lg text-gray-700 hover:text-purple-700">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <main class="flex-grow container mx-auto p-6">
-            <section class="mb-8">
-                <h2 class="text-3xl font-bold mb-4">About EVS</h2>
-                <p class="text-lg mb-4">Welcome to the Electronic Voting Software (EVS). This software is designed to provide a secure and efficient way to conduct electronic voting, similar to an Electronic Voting Machine (EVM) but on a computer.</p>
-            </section>
-            <section class="mb-8">
-                <h2 class="text-3xl font-bold mb-4">Features</h2>
-                <ul class="list-disc list-inside space-y-2">
-                    <li>Secure voting process</li>
-                    <li>Real-time results</li>
-                    <li>User-friendly interface</li>
-                </ul>
-            </section>
-            <section class="mb-8">
-                <h2 class="text-3xl font-bold mb-4">How to Use EVS</h2>
-                <ol class="list-decimal list-inside space-y-2">
-                    <li>Log in to the system using your credentials.</li>
-                    <li>Select the election you want to vote in.</li>
-                    <li>Choose your preferred candidates.</li>
-                    <li>Submit your vote.</li>
-                    <li>Log out of the system.</li>
-                </ol>
-            </section>
-            <section>
-                <h2 class="text-3xl font-bold mb-4">About the Author</h2>
-                <p>This software was developed by [Your Name], a student at [Your College]. For more information, please contact [Your Email].</p>
-            </section>
-        </main>
-        <footer class="bg-gray-800 p-6 text-center">
-            <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-20">
+            <div class="container mx-auto text-center">
+                <h2 class="text-5xl font-bold mb-6">Electronic Voting Software (EVS)</h2>
+                <p class="text-xl mb-8">A secure and efficient way to conduct electronic voting.</p>
+                <a href="#" class="bg-white text-purple-700 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">Get Started</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-20 bg-gray-100">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8">About EVS</h2>
+                <p class="text-lg max-w-3xl mx-auto leading-relaxed">Welcome to the Electronic Voting Software (EVS). This software is designed to provide a secure and efficient way to conduct electronic voting, similar to an Electronic Voting Machine (EVM) but on a computer.</p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12">Features</h2>
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                            <h3 class="text-2xl font-bold mb-4">Secure Voting</h3>
+                            <p class="text-lg leading-relaxed">Our software ensures a secure voting process, protecting the integrity of your elections.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                            <h3 class="text-2xl font-bold mb-4">Real-Time Results</h3>
+                            <p class="text-lg leading-relaxed">Get real-time results as votes are counted, providing immediate insights into election outcomes.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                            <h3 class="text-2xl font-bold mb-4">User-Friendly Interface</h3>
+                            <p class="text-lg leading-relaxed">Our intuitive interface makes it easy for users of all ages and technical skills to cast their votes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Use Section -->
+        <section class="py-20 bg-gray-100">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-12">How to Use EVS</h2>
+                <div class="flex flex-wrap justify-center -mx-4">
+                    <div class="w-full md:w-1/5 px-4 mb-8">
+                        <div class="bg-white p-8 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold mb-4">1. Log In</h3>
+                            <p class="text-lg">Log in to the system using your credentials.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/5 px-4 mb-8">
+                        <div class="bg-white p-8 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold mb-4">2. Select Election</h3>
+                            <p class="text-lg">Select the election you want to vote in.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/5 px-4 mb-8">
+                        <div class="bg-white p-8 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold mb-4">3. Choose Candidates</h3>
+                            <p class="text-lg">Choose your preferred candidates.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/5 px-4 mb-8">
+                        <div class="bg-white p-8 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold mb-4">4. Submit Vote</h3>
+                            <p class="text-lg">Submit your vote.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/5 px-4 mb-8">
+                        <div class="bg-white p-8 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold mb-4">5. Log Out</h3>
+                            <p class="text-lg">Log out of the system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About the Author Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8">About the Author</h2>
+                <p class="text-lg leading-relaxed max-w-2xl mx-auto">This software was developed by [Your Name], a student at [Your College]. For more information, please contact [Your Email].</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-6">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+            </div>
         </footer>
     </div>
     <!-- Custom JS -->
